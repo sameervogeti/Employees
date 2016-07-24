@@ -1,4 +1,4 @@
-package com.mkyong.transaction;
+package com.sameer.employees.transaction;
  
 public interface TransactionBo{
  

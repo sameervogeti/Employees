@@ -1,6 +1,6 @@
-package com.mkyong.transaction.impl;
+package com.sameer.employees.transaction.impl;
 
-import com.mkyong.transaction.TransactionBo;
+import com.sameer.employees.transaction.TransactionBo;
 
 public class TransactionBoImpl implements TransactionBo {
 
