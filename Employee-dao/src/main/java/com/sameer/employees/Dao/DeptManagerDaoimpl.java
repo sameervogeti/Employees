@@ -7,6 +7,7 @@ import javax.naming.InitialContext;
 import org.apache.log4j.Logger;
 import org.hibernate.LockMode;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.sameer.employees.Model.DeptManager;
 import com.sameer.employees.Model.DeptManagerId;
@@ -22,15 +23,10 @@ public class DeptManagerDaoimpl {
 
 	private static final Logger log = Logger.getLogger(DeptManagerDaoimpl.class);
 
-	private final SessionFactory sessionFactory = getSessionFactory();
-
-	protected SessionFactory getSessionFactory() {
-		try {
-			return (SessionFactory) new InitialContext().lookup("SessionFactory");
-		} catch (Exception e) {
-			log.error("Could not locate SessionFactory in JNDI", e);
-			throw new IllegalStateException("Could not locate SessionFactory in JNDI");
-		}
+	@Autowired
+	private  SessionFactory sessionFactory;
+		public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
 	}
 
 	public void persist(DeptManager transientInstance) {
