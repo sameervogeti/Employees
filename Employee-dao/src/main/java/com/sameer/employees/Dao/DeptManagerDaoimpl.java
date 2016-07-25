@@ -14,11 +14,7 @@ import com.sameer.employees.Model.DeptManagerId;
 
 import static org.hibernate.criterion.Example.create;
 
-/**
- * Home object for domain model class DeptManager.
- * @see .DeptManager
- * @author Hibernate Tools
- */
+
 public class DeptManagerDaoimpl {
 
 	private static final Logger log = Logger.getLogger(DeptManagerDaoimpl.class);

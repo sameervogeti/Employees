@@ -14,11 +14,7 @@ import com.sameer.employees.Model.Departments;
 
 import static org.hibernate.criterion.Example.create;
 
-/**
- * Home object for domain model class Departments.
- * @see .Departments
- * @author Hibernate Tools
- */
+
 public class DepartmentsDaoimpl {
 
 	

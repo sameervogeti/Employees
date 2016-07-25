@@ -14,11 +14,7 @@ import com.sameer.employees.Model.SalariesId;
 
 import static org.hibernate.criterion.Example.create;
 
-/**
- * Home object for domain model class Salaries.
- * @see .Salaries
- * @author Hibernate Tools
- */
+
 public class SalariesDaoimpl {
 
 	private static final Logger log = Logger.getLogger(SalariesDaoimpl.class);

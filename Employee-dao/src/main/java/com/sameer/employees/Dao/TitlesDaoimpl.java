@@ -14,11 +14,6 @@ import com.sameer.employees.Model.TitlesId;
 
 import static org.hibernate.criterion.Example.create;
 
-/**
- * Home object for domain model class Titles.
- * @see .Titles
- * @author Hibernate Tools
- */
 public class TitlesDaoimpl {
 
 	private static final Logger log = Logger.getLogger(TitlesDaoimpl.class);

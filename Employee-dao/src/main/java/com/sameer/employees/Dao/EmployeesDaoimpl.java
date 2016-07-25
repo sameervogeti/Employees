@@ -13,11 +13,6 @@ import com.sameer.employees.Model.Employees;
 
 import static org.hibernate.criterion.Example.create;
 
-/**
- * Home object for domain model class Employees.
- * @see .Employees
- * @author Hibernate Tools
- */
 public class EmployeesDaoimpl {
 
 	private static final Logger log = Logger.getLogger(EmployeesDaoimpl.class);
