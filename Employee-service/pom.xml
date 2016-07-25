@@ -74,6 +74,13 @@
 			<artifactId>spring-web</artifactId>
 			<version>3.2.6.RELEASE</version>
 		</dependency>
+		
+		<!-- Employee-Dao -->
+		<dependency>
+			<groupId>com.sameer</groupId>
+  <artifactId>Employee-dao</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+		</dependency>
   </dependencies>
 
 </project>

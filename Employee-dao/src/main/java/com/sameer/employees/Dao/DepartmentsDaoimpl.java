@@ -2,19 +2,20 @@ package com.sameer.employees.Dao;
 // default package
 // Generated Jul 23, 2016 1:51:09 AM by Hibernate Tools 4.0.0.Final
 
+import java.util.LinkedList;
 import java.util.List;
-import javax.naming.InitialContext;
 import org.apache.log4j.Logger;
 
 import org.hibernate.LockMode;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.sameer.employees.Model.Departments;
 
 import static org.hibernate.criterion.Example.create;
 
-
+@Repository("deptdao")
 public class DepartmentsDaoimpl {
 
 	
@@ -96,6 +97,23 @@ public class DepartmentsDaoimpl {
 			log.error("get failed", re);
 			throw re;
 		}
+	}
+	
+	public List<Departments> deptlist()
+	{
+		log.info("fetching the departments list....");
+		List<Departments> deptlist=new LinkedList<Departments>();
+		try
+		{
+			
+			deptlist=(List<Departments>)sessionFactory.openSession().createCriteria(Departments.class).list();
+			
+		}
+		catch(Exception e)
+		{
+			
+		}
+		return deptlist;
 	}
 
 	public List<Departments> findByExample(Departments instance) {
